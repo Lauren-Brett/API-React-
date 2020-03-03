@@ -7,6 +7,9 @@ function SongDetail({songSelected}){
     return(
         <Fragment> 
             <p>{songSelected["im:name"]["label"]}</p>
+            <p>{songSelected["im:artist"]["label"]}</p>
+            <p>{songSelected["category"]["attributes"]["label"]}</p>
+
         </Fragment>
     )
 }
