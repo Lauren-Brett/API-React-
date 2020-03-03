@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-function SongDetail(){
+function SongDetail({songSelected}){
+
+    if(!songSelected) return null;
 
     return(
-        <h5>detail</h5>
+        <Fragment> 
+            <p>{songSelected["im:name"]["label"]}</p>
+        </Fragment>
     )
 }
 
