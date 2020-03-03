@@ -21,12 +21,17 @@ class SongContainer extends Component {
         .catch(error => console.error(error))
     }
 
+    handleSongClicked = (songIdClicked) => {
+        this.setState({selectedSongId: songIdClicked})
+    }
+
 
     render(){
         return(
             <section>
               <h1>Song Container</h1>
-              <SongList songs={this.state.songs}/>
+              <SongList songs={this.state.songs} 
+                        onSongClicked={this.handleSongClicked}/>
               <SongDetail />
             </section>
         )
